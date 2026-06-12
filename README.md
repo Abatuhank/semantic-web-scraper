@@ -1,10 +1,10 @@
-# 🧠 Semantic Web Scraper
+#  Semantic Web Scraper
 
 Yapay zeka (LLM) destekli, asenkron ve semantik web kazıma (web scraping) sistemi. Geleneksel XPath veya CSS seçici bağımlılıklarını ortadan kaldırarak, web sayfalarından doğal dil sorgularıyla yapılandırılmış veri çıkarılmasını sağlar.
 
 ---
 
-## 🛠️ Sistem Mimarisi
+##  Sistem Mimarisi
 
 Proje, yüksek yük altında çalışabilecek asenkron ve mikro-servis mimarisine sahiptir:
 
@@ -24,7 +24,7 @@ Proje, yüksek yük altında çalışabilecek asenkron ve mikro-servis mimarisin
 
 ---
 
-## 🚀 Kurulum ve Çalıştırma
+##  Kurulum ve Çalıştırma
 
 Proje, Docker ve Docker Compose kullanılarak tek bir komutla kolayca ayağa kaldırılabilir.
 
@@ -70,7 +70,7 @@ Ardından tarayıcınızdan http://localhost:3000 adresine giderek sistemi görs
 
 ---
 
-## 🧪 Testlerin Çalıştırılması
+##  Testlerin Çalıştırılması
 
 Projede 90'dan fazla birim (unit) testi ve gerçek web sitelerine karşı yazılmış entegrasyon testleri bulunur.
 
@@ -90,7 +90,7 @@ python test_live_sites.py
 
 ---
 
-## 📡 API Endpoint'leri ve Kullanım Örnekleri
+##  API Endpoint'leri ve Kullanım Örnekleri
 
 ### 1. Tek Sayfa Scrape + LLM Analiz (`POST /api/scrape/analyze`)
 Tek bir web sayfasını kazır, içeriği temizler ve LLM'e göndererek sorunuza yanıt arar.
@@ -151,5 +151,5 @@ curl -X POST "http://localhost:8000/api/scrape/deep" \
 
 ---
 
-## 🛡️ Akıllı Maliyet & Token Yönetimi (Smart Trim)
+##  Akıllı Maliyet & Token Yönetimi (Smart Trim)
 Sistemimiz, LLM girdi limitlerini aşmamak ve token maliyetlerini düşürmek için **Smart Trim** algoritmasına sahiptir. Wikipedia veya haber portalları gibi devasa sayfalar (100K+ karakter) kazındığında, algoritma metni analiz eder; kullanıcının sorusuyla en alakalı kısımları, sayısal değerleri ve tablo satırlarını önceliklendirerek sadece ilgili bölümleri LLM'e gönderir. Bu sayede API maliyetleri **%90'a varan oranda optimize edilir**.
